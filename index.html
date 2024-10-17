@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TWH Task Manager</title>
+  <link rel="icon" href="BCSC logo.png" />
+  <link rel="stylesheet" href="task-manager.css">
+  <script src="https://kit.fontawesome.com/2a8a609a57.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="BCSC logo.png" alt="BCSC Logo" class="logo">
+      <h1>Task Manager</h1>
+    </div>
+  </header>
+  <main>
+    <div class="nav-buttons">
+      <button id="toggleAllTasks" class="active">All Tasks</button>
+      <button id="toggleMyTasks">My Tasks</button>
+    </div>
+    <section id="allTasks" class="task-section active">
+      <h2>All Tasks</h2>
+      <div class="filter-wrapper">
+        <label for="categoryFilter">Filter by Category:</label>
+        <div class="custom-select-wrapper">
+          <select id="categoryFilter" class="custom-select">
+            <option value="All">BCSC HQ</option>
+            <option value="Media-Affairs-Wing">Media Affairs Wing</option>
+            <option value="PRA-Wing">PRA Wing</option>
+            <option value="ITA-Wing">ITA Wing</option>
+            <option value="CIA-Wing">CIA Wing</option>
+            <option value="Univarsity-Affairs-Wing">Univarsity Affairs Wing</option>
+            <option value="Foreign-Affairs-Wing">Foreign Affairs Wing</option>
+            <option value="Graphics-Wing">Graphics Wing</option>
+            <option value="Marketing-Wing">Marketing Wing</option>
+          </select>
+        </div>
+      </div>
+      <div id="allTasksContainer" class="tasks-container">
+        <!-- Tasks will be dynamically inserted here -->
+      </div>
+    </section>
+
+    <section id="myTasks" class="task-section">
+      <h2>My Tasks</h2>
+      <div id="myTasksContainer" class="tasks-container">
+        <!-- Tasks will be dynamically inserted here -->
+      </div>
+    </section>
+  </main>
+  <!-- Footer section Start -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="BCSC logo-1.png" alt="BCSC Logo" class="logo" />
+    </div>
+    <div class="footer-center-text">
+      <p>
+        Copyright © 2024 <strong> BCSC </strong>. All rights reserved. <br />
+        This site is developed by <a href="https://www.facebook.com/tanvir934" target="_blank">Md. Tanvir Rahman</a>
+      </p>
+    </div>
+    <div class="footer-social-icons">
+      <a href="https://www.facebook.com/Cantonmentian" target="_blank" class="fa fa-facebook"></a>
+      <a href="https://www.instagram.com/bcsc_official20?igsh=bmI5bDg0MHM3OTU0" target="_blank" class="fa fa-instagram"></a>
+      <a href="https://youtube.com/@bcsc_official2020?si=TRhlYWNfWosWOrOL" target="_blank" class="fa fa-youtube"></a>
+    </div>
+  </footer>
+  
+      <!-- Footer section end -->
+
+  <!-- Firebase and JS -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="task-manager.js"></script>
+</body>
+</html>
